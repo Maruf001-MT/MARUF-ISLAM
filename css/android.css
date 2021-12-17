@@ -1,0 +1,359 @@
+@media only screen and (max-width: 750px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .social-bar{
+      display: none;
+    }
+.left-nav .logo img{
+    width: 55px;
+    height: 40px;
+}
+nav{
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    z-index: 3000;
+}
+.navmenu{
+    display: none;
+}
+
+
+.menu{
+    width:25px;
+    height:25px;
+    float: right;
+    display:block;
+    z-index: 3000;
+  }
+  
+  #toggle.active{
+    background:var(--primary);
+  }
+  #toggle{
+    position:fixed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.2s;
+    top: 5%;
+    z-index:100000;
+  }
+  #toggle.active::before{
+  transform:translateY(0px) rotate(45deg);
+  box-shadow:0 0 0 var(--primary);
+  }
+  #toggle::before{
+    content:'';
+    position:absolute;
+    background:var(--primary);
+    width:26px;
+    height:4px;
+    transition:0.2s;
+    box-shadow:0 10px 0 var(--primary);
+    transform:translateY(-10px);
+  }
+  #toggle::after{
+    content:'';
+    position:absolute;
+    background:black;
+    width:26px;
+    height:4px;
+    transition:0.2s;
+    background:var(--primary);
+    transform:translateY(10px);
+  }
+  #toggle.active::after{
+    transform:translateY(0px) rotate(-45deg);
+  }
+  .navigation{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+        display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:0;
+      visibility:hidden;
+  }
+  .navigation span{
+    position:absolute;
+    top:-100%;
+    left:calc(25% * var(--i));
+    width:25%;
+    height:100%;
+    transition:0.20s;
+    background:var(--secondary);
+    transition-delay:calc(.20s * var(--i));
+  }
+  .navigation.active span{
+    top:0px;
+  }
+  .navigation.active{
+    visibility:visible;
+  }
+  .navigation ul{
+      z-index:1000;
+        display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      transform:translateX(-100px);
+      opacity:0;
+      visibility:hidden;
+      transition:0.5s;
+  }
+  .navigation.active ul{
+    visibility:visible;
+    opacity:1;
+    transform:translateX(0px);
+    transition-delay:.5s;
+  }
+  .navigation ul li{
+    list-style-type:none;
+    margin:11px 0px;
+  }
+  .navigation ul li a{
+    text-decoration:none;
+    font-size:1.5rem;
+    color:black;
+    text-align:center;
+      padding:10px;
+    font-weight:bold;
+    font-family: 'Sulphur Point', sans-serif;
+    transition:.5s;
+  }
+  .navigation ul li a:hover{
+    letter-spacing:7px;
+    font-size:1.7rem;
+  }
+  .menu-item{
+    position: relative;
+    right: -610px;
+    display:none;
+  }
+
+  .banner{
+    width: 100%;
+    height: 100vh;
+    background: var(--dark);
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0%, 100% 92%, 50% 100%, 0 92%);
+ 
+    transition: .5s;
+    }
+    .sticky-banner{
+        clip-path: polygon(0 0, 100% 0%, 100% 92%, 49% 87%, 0 92%);
+
+    }
+
+    .left-banner{
+        left: 5%;
+        width: 40%;
+    }
+    .left-banner h3{
+        color: var(--white);
+        font-size: 1.5rem;
+    } 
+    .left-banner h4{
+        font-size: .8rem;
+    } 
+    .left-banner h1{
+        font-size: 2.8rem;
+    }
+   
+    .left-banner p{
+       display: none;
+   }
+   .right-banner{
+    width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+    .right-banner img{
+        transform: scale(.5);
+        
+    }
+    
+    
+    .dwnld-btn a button{
+      top:105%;
+      text-align:center;
+      width:100px;
+      height:40px;
+      font-size:.6rem;
+      left:0%;
+      color:var(--secondary);
+      border:2px solid var(--secondary);
+     position:absolute;
+     font-family: 'Poppins', sans-serif;
+     overflow:hidden;
+     z-index:1;
+      font-weight:bolder;
+    }
+
+    .about{
+      display: flex;
+      flex-direction: column;
+  }
+
+    .about .left img{
+      width: 200px;
+      height: 200px;
+      position: relative;
+      border-radius: 50%;
+      left: 15%;
+      border: 4px solid var(--secondary);
+    }
+
+    .about .right{
+      padding-left: 10px;
+      padding-top: 50px;
+  }
+  .about .right h2{
+      font-size: 2.3rem;
+      font-family: 'Sulphur Point', sans-serif;
+  }
+  .about .right h2 span{
+      color: var(--primary);
+  }
+  .about .right p{
+      font-size: .8rem;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      padding-right: 20px;
+  }
+  .about .right a{
+      font-size: 1rem;
+      font-family: 'Sulphur Point', sans-serif;
+      text-decoration: none;
+      position: relative;
+      font-weight: bolder;
+      color: var(--secondary);
+     
+  }
+  .achievement .container{
+  min-height: 350vh;
+    
+}
+
+.project .container{
+  width: 100%;
+  height: 0vh;
+  display: flex;
+  align-items: center;
+}
+.row{
+  flex-direction: column;
+}
+.col{
+  margin: 50px 0px;
+}
+.col:nth-child(odd){
+  transform: none;
+}
+.col img{
+  width: 100%;
+}
+.container .info h2{
+  font-size: 1.3rem;
+}
+.info button a{
+  font-size: .8rem;
+}
+.dwnld-btn2{
+  margin-top: 250%;
+  margin-bottom: 20px;
+}
+.dwnld-btn2 a button{
+  width:200px;
+  height:40px;
+  font-size:1rem;
+}
+.clientReviews .row{
+  flex-direction: column;
+}
+.clientReviews .row a{
+  display: block;
+}
+.clientReviews .mobileNone{
+  display: none;
+}
+.clientReviews .row .rvCard{
+  position: relative;
+  width: 80%;
+  margin: 50px 20px;
+}
+.clientReviews .row .rvCard:nth-child(odd){
+  transform: translateY(0%);
+}
+.skill-des{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #101010;
+
+  padding-top: 30%;
+}
+.skill .heading h2{
+  font-size: 2.3rem;
+  font-family: 'Sulphur Point', sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: absolute;
+  margin-bottom: -10%;
+  color: var(--white);
+ left: 40%;
+}
+
+.skill-container{
+  flex-direction: column;
+}
+.skill-container .card{
+  margin: 15% 0% 15% 5%;
+  overflow: hidden;
+  transition: .5s;
+  width: 90%;
+}
+
+.contact{
+  padding: 15px;
+}
+.contact-container{
+  flex-direction: column;
+}
+.contact-container .contactInfo{
+  margin-bottom: 40px;
+}
+.contact-container .contactInfo,.contactForm{
+  width: 100%;
+}
+.contact-container .contactInfo .box .text{
+  font-size: 13px;
+}
+.contact-container .contactInfo .box .icon{
+  min-width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+footer{
+  height: 40px;
+}
+footer p{
+  font-size: .8rem;
+  word-spacing: -2px;
+  color:rgb(172, 172, 172);
+  font-family: 'Sulphur Point', sans-serif;
+}
+
+
+}
