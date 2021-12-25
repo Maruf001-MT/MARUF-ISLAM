@@ -679,6 +679,7 @@ z-index:1;
     margin-bottom: 25px;
     display: flex;
     align-items: center;
+    display: none;
 
 }
 .clientReviews .row a i{
